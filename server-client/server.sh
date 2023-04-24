@@ -1,4 +1,7 @@
 #!/bin/bash
-while read line; do 
-  echo "[$line]"
-done
+
+PORT=12345
+
+# Startet den Server und wartet auf Verbindungen
+echo "Server lauscht auf Port $PORT"
+ncat -l -k -v $PORT
