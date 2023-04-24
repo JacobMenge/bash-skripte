@@ -16,7 +16,7 @@ Willkommen zur Sammlung von verschiedenen Bash-Skripten, die während unserer Un
 
 ## 💡 Verbesserungen und Vorschläge
 
-Ich schätze Ihre Meinung! Wenn Sie Fragen haben oder Verbesserungsvorschläge für die Skripte anbringen möchten, nutzen Sie bitte die [Diskussionsfunktion auf Github](https://github.com/username/repo/discussions). Ich freue mich auf Ihre Beiträge!
+Ich schätze Ihre Meinung! Wenn Sie Fragen haben oder Verbesserungsvorschläge für die Skripte anbringen möchten, nutzen Sie bitte die [Diskussionsfunktion auf Github](https://github.com/JacobMenge/bash-skripte/discussions). Ich freue mich auf Ihre Beiträge!
 
 ## 🎓 Lernressourcen
 
