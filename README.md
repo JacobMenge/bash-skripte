@@ -64,6 +64,8 @@ Ich schätze Ihre Meinung! Wenn Sie Fragen haben oder Verbesserungsvorschläge f
 - [Offizielle Bash-Dokumentation](https://www.gnu.org/software/bash/manual/bash.html)
 - [Bash-Tutorial](https://www.tutorialspoint.com/unix/unix-shell.htm)
 - [Bash-Scripting-Guide](https://tldp.org/LDP/abs/html/index.html)
+- [netcat-ubuntuusers](https://wiki.ubuntuusers.de/netcat/)
+
 
 Viel Spaß beim Erkunden und Lernen! 😃
 
