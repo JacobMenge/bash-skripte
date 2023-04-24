@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # IP-Adresse und portnummer des Servers
-SERVER_IP="127.0.0.1"
-SERVER_PORT=12345
+SERVER_IP="0.0.0.0"
+SERVER_PORT=2000
 
 # verbindet sich mit dem Server und sendet eine Nachricht
 echo "Verbindung zum Server $SERVER_IP:$SERVER_PORT"
