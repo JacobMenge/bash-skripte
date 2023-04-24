@@ -4,10 +4,15 @@ Willkommen zur Sammlung von verschiedenen Bash-Skripten, die während unserer Un
 
 ## 📚 Inhalt
 
-- [Skript 1](./skript1.sh) - Beschreibung von Skript 1
-- [Skript 2](./skript2.sh) - Beschreibung von Skript 2
-- [Skript 3](./skript3.sh) - Beschreibung von Skript 3
-- ... und weitere!
+### Server-Client
+- [server.sh](./server-client/client.sh) - Beschreibung von Skript 1
+- [Client.sh](./server-client/server.sh) - Beschreibung von Skript 2
+
+- [run-server.sh](./server-client/client.sh) - Beschreibung von Skript 1
+- [run-client.sh](./server-client/server.sh) - Beschreibung von Skript 2
+
+
+### ... und weitere!
 
 ## 💡 Verbesserungen und Vorschläge
 
