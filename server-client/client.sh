@@ -9,4 +9,5 @@ echo "Verbindung zum Server $SERVER_IP:$SERVER_PORT"
 echo "Nachricht:"
 read MSG
 echo "Sende Nachricht: $MSG"
-echo "$MSG" | ncat $SERVER_IP $SERVER_PORT
+RESPONSE=$(echo "$MSG" | ncat $SERVER_IP $SERVER_PORT)
+echo "Antwort vom Server: $RESPONSE"
