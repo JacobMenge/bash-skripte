@@ -1,30 +1,54 @@
-# 🚀 Sammlung nützlicher Bash-Skripte
-
+<h1 align="center">
+ 🚀 Sammlung nützlicher Bash-Skripte 🚀
+</h1>
+<p align="center">
 Willkommen zur Sammlung von verschiedenen Bash-Skripten, die während unserer Unterrichtseinheit vorgestellt wurden! Hier finden Sie Skripte, die den Alltag erleichtern und als Übungen für den Umgang mit Bash dienen.
+</p>
+  </br>
 
 ## 📚 Inhalt
 
 ### Server-Client
 **Server:** [server.sh](./server-client/server.sh) 
 
-Dieses Programm ist der Server.
+`server.sh` ist ein Shell-Skript, das einen einfachen Server erstellt, der auf Verbindungen lauscht und eine voreingestellte Nachricht an verbundene Clients sendet.
 
-Zu Beginn wird eine Variable mit dem Namen `PORT` erstellt und ihr wird der Wert "2000" zugewiesen. Diese Variable wird später im Skript verwendet.
+`````
+#!/bin/bash
 
-Anschließend wird mit dem Befehl `echo` eine Ausgabe auf dem Bildschirm erzeugt. Diese Ausgabe enthält den Text "Server lauscht auf Port $PORT". Das Dollarzeichen vor der Variable `PORT` sorgt dafür, dass der Wert der Variable in den Text eingefügt wird. 
+PORT=2000
 
-Zum Schluss wird der eigentliche Server gestartet. Dazu wird der Befehl `ncat` verwendet. Die Option `-l` sorgt dafür, dass der Server im "Listening"-Modus gestartet wird. Mit der Option `-k` wird der Server nach einer Verbindung nicht beendet, sondern bleibt weiterhin im "Listening"-Modus. Die Option `-v` steht für "verbose" und sorgt dafür, dass der Server mehr Informationen ausgibt.
+# Startet den Server und wartet auf Verbindungen
+echo "Server lauscht auf Port $PORT"
+echo "Hallo" | ncat -l 0.0.0.0 $PORT
+`````
+
+Das Skript definiert zunächst die Variable `PORT` mit dem Wert 2000. Anschließend wird eine Meldung ausgegeben, die angibt, dass der Server auf Verbindungen auf dem entsprechenden Port lauscht. Schließlich wird der Befehl `ncat` verwendet, um einen Server zu starten, der auf dem angegebenen Port lauscht und die Nachricht "Hallo" an alle verbundenen Clients sendet.
 
 
 **Client:** [client.sh](./server-client/client.sh) 
 
-Dieses Programm ist der Client. 
+`client.sh` ist ein Shell-Skript, das einen einfachen Client erstellt, der sich mit dem Server verbindet, eine vom Benutzer eingegebene Nachricht sendet und die Antwort des Servers empfängt.
 
-Zu Beginn werden zwei Variablen erstellt. Die Variable `SERVER_IP` enthält die IP-Adresse des Servers, mit dem sich das Skript verbinden soll. In diesem Fall ist die IP-Adresse "0.0.0.0". Die Variable `SERVER_PORT` enthält die Portnummer des Servers, mit dem sich das Skript verbinden soll. In diesem Fall ist die Portnummer "2000". 
+```````
+#!/bin/bash
 
-Anschließend wird mit dem Befehl `echo` eine Ausgabe auf dem Bildschirm erzeugt, die den Nutzer auffordert, eine Nachricht einzugeben. Mit dem Befehl `read` wird eine Eingabeaufforderung erstellt, die dem Nutzer erlaubt, eine Nachricht einzugeben. Die eingegebene Nachricht wird in der Variable `MSG` gespeichert. 
+# IP-Adresse und portnummer des Servers
+SERVER_IP="0.0.0.0"
+SERVER_PORT=2000
 
-Danach wird wieder mit dem Befehl `echo` eine Ausgabe auf dem Bildschirm erzeugt, die anzeigt, dass die Nachricht gesendet wird. Die eingegebene Nachricht wird mit dem Befehl `ncat` an den Server gesendet. Dabei wird die IP-Adresse und die Portnummer des Servers angegeben. Die eingegebene Nachricht wird als Argument an den Befehl `ncat` übergeben, damit sie an den Server gesendet werden kann.
+# verbindet sich mit dem Server und sendet eine Nachricht
+echo "Verbindung zum Server $SERVER_IP:$SERVER_PORT"
+echo "Nachricht:"
+read MSG
+echo "Sende Nachricht: $MSG"
+RESPONSE=$(echo "$MSG" | ncat $SERVER_IP $SERVER_PORT)
+echo "Antwort vom Server: $RESPONSE"
+```````
+
+Das Skript definiert zunächst die Variablen `SERVER_IP` und `SERVER_PORT`, um die Verbindungsinformationen des Servers festzulegen. Anschließend wird eine Meldung ausgegeben, die angibt, dass der Client versucht, eine Verbindung zum Server herzustellen.
+
+Der Benutzer wird aufgefordert, eine Nachricht einzugeben, die an den Server gesendet werden soll. Die eingegebene Nachricht wird in der Variable `MSG` gespeichert. Danach wird die Nachricht an den Server gesendet, indem der Befehl ncat verwendet wird. Die Antwort des Servers wird in der Variable `RESPONSE` gespeichert und anschließend ausgegeben.
 
 
 
