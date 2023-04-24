@@ -5,9 +5,11 @@ Willkommen zur Sammlung von verschiedenen Bash-Skripten, die während unserer Un
 ## 📚 Inhalt
 
 ### Server-Client
-- [server.sh](./server-client/client.sh) - Beschreibung von Skript 1
-- [Client.sh](./server-client/server.sh) - Beschreibung von Skript 2
+- [server.sh](./server-client/server.sh) - Dieses Programm ist der Server.
+Zu Beginn wird eine Variable mit dem Namen "PORT" erstellt und ihr wird der Wert "2000" zugewiesen. Diese Variable wird später im Skript verwendet. Anschließend wird mit dem Befehl "echo" eine Ausgabe auf dem Bildschirm erzeugt. Diese Ausgabe enthält den Text "Server lauscht auf Port $PORT". Das Dollarzeichen vor der Variable "PORT" sorgt dafür, dass der Wert der Variable in den Text eingefügt wird. Zum Schluss wird der eigentliche Server gestartet. Dazu wird der Befehl "ncat" verwendet. Die Option "-l" sorgt dafür, dass der Server im "Listening"-Modus gestartet wird. Mit der Option "-k" wird der Server nach einer Verbindung nicht beendet, sondern bleibt weiterhin im "Listening"-Modus. Die Option "-v" steht für "verbose" und sorgt dafür, dass der Server mehr Informationen ausgibt.
 
+
+- [client.sh](./server-client/client.sh) - Beschreibung von Skript 2
 - [run-server.sh](./server-client/client.sh) - Beschreibung von Skript 1
 - [run-client.sh](./server-client/server.sh) - Beschreibung von Skript 2
 
