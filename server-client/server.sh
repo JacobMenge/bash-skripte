@@ -1,7 +1,7 @@
 #!/bin/bash
 
-PORT=12345
+PORT=2000
 
 # Startet den Server und wartet auf Verbindungen
 echo "Server lauscht auf Port $PORT"
-ncat -l -k -v $PORT
+ncat -l 0.0.0.0 $PORT
