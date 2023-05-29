@@ -11,7 +11,7 @@ Willkommen zur Sammlung von verschiedenen Bash-Skripten, die während unserer Un
 ### Server-Client
 **Server:** [server.sh](./server-client/server.sh) 
 
-`server.sh` ist ein Shell-Skript, das einen einfachen Server erstellt, der auf Verbindungen lauscht und eine voreingestellte Nachricht an verbundene Clients sendet.
+`server.sh` ist ein Shell-Skript, dass einen einfachen Server erstellt, der auf Verbindungen lauscht und eine voreingestellte Nachricht an verbundene Clients sendet.
 
 `````
 #!/bin/bash
@@ -28,7 +28,7 @@ Das Skript definiert zunächst die Variable `PORT` mit dem Wert 2000. Anschließ
 
 **Client:** [client.sh](./server-client/client.sh) 
 
-`client.sh` ist ein Shell-Skript, das einen einfachen Client erstellt, der sich mit dem Server verbindet, eine vom Benutzer eingegebene Nachricht sendet und die Antwort des Servers empfängt.
+`client.sh` ist ein Shell-Skript, dass einen einfachen Client erstellt, der sich mit dem Server verbindet, eine vom Benutzer eingegebene Nachricht sendet und die Antwort des Servers empfängt.
 
 ```````
 #!/bin/bash
